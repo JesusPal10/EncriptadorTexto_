@@ -1,0 +1,244 @@
+/*General styling*/
+a{
+    text-decoration: none;
+}
+
+@keyframes glowingorange {
+    0%{
+        box-shadow: 0 0 16px #D86945;
+    }
+    50%{
+        box-shadow: 0 0 32px #D86945;
+    }
+    100%{
+        box-shadow: 0 0 16px #D86945;
+    }
+}
+
+@keyframes glowingwhite {
+    0%{
+        box-shadow: 0 0 4px #ffffff80;
+    }
+    50%{
+        box-shadow: 0 0 8px #ffffff80;
+    }
+    100%{
+        box-shadow: 0 0 4px #ffffff80;
+    }
+}
+
+/*Index*/
+
+body{
+    background: #1A1C26;
+    margin: 0;
+}
+
+#background{
+    background-image: url(Imagenes/different-types-of-encryption-hero1563466041427238.png);
+    background-size: cover;
+}
+
+header{
+    align-items: center;
+    border-bottom: 0.1vh #D8694540 solid;
+    box-shadow: 0px 4px 24px #D8694540;
+    display: flex;
+    height: 9.9vh;
+    padding: 0 5%;
+    width: 90%;
+}
+
+header a{
+    color: #fff;
+}
+
+main{
+    height: 70vh;
+    margin: 5vh 0;
+    padding: 0 5%;
+    width: 90%;
+}
+
+#txtInsertado, #mensaje{
+    background: #1a1c2600;
+    border: none;
+    border-radius: 8px;
+    color: #D86945;
+    font-family: 'Roboto Mono';
+    font-size: 1rem;
+
+    height: 22vh;
+    padding-left: 4.35%;
+    padding-top: 3vh;
+    resize: none;
+    width: 95%;
+}
+
+#mensaje{
+    animation: none; 
+    color: white; 
+    background: #df865266; 
+    border-radius: 8px;
+}
+
+#txtInsertado::placeholder{
+    color: #df8652A6;
+}
+
+#mensaje::placeholder{
+    color: white; 
+    font-weight: 100;
+}
+
+textarea:focus, textarea:hover{
+    animation: glowingorange 2s infinite;
+    outline: none;
+}
+
+.cajaBtns{
+    display: flex;
+    gap: 2vh;
+    justify-content: space-between;
+}
+
+.encriptar, .desencriptar, .copiar{
+    background: #df8652A6;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-family: 'Montserrat';
+    font-weight: 100;
+    font-size: 12px;
+    height: 5vh;
+    margin-top: 3vh;
+    transition: 1s all;
+    width: 100%;
+}
+
+.encriptar, .desencriptar{ 
+    margin-bottom: 3vh;    
+}
+
+button:hover{
+    animation: glowingorange 4s infinite;
+    background:#D86945;
+    transform: scale(1.05);
+
+}
+
+footer{
+    align-items: center;
+    border-top: 0.1vh #D8694540 solid;
+    box-shadow: 0px 4px 24px #D8694540;
+    display: flex;
+    justify-content:space-between;
+    height: 9.9vh;
+    padding: 0 5%;
+    width: 90%;
+}
+
+.socialMedia{
+    align-items: center;
+    background: none;
+    border: 0.1vh #ffffff40 solid;
+    border-radius: 4px;
+    display: flex;
+    justify-content:space-between;
+    padding: 4px 16px;
+    transition: 4s all;
+}
+
+.socialMedia p{
+    padding-right: 16px;
+    color: #fff;
+}
+
+.socialIcons{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    gap: 8px;
+    padding-left: 16px;
+    border-left: 1px #fff solid; 
+}
+
+.socialIcons li{
+    filter: invert(99%) sepia(5%) saturate(276%) hue-rotate(254deg) brightness(117%) contrast(100%);
+    transition: 1s all;
+}
+
+.socialMedia li:hover{
+    transform: scale(1.10);
+
+}
+
+.socialMedia:hover{
+    animation: glowingwhite 4s infinite;
+    background: none;
+    transform: scale(1.05);
+}
+
+
+/*Media queries*/
+
+@media (min-width: 375px){
+    html{
+        font-size: 12px;
+        color: white;
+    }
+
+    h1{
+        font-family: 'Josefin Sans';
+        font-size: 1rem;
+    }
+
+    h4, li, p{
+        font-family: 'Josefin Sans';
+        font-size: 0.75rem;
+    }
+
+    .encriptar, .desencriptar, .copiar{
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 768px){
+    html{
+        font-size: 14px;
+        color: white;
+    }
+}
+
+@media (min-width: 1024px),(max-height: 540px){
+    html{
+        font-size: 16px;
+    }
+
+    h1, h4, li,p{
+        font-family: 'Josefin Sans';
+        font-size: 1rem;
+    }
+
+    li{
+        font-size: 1rem;  
+    }
+    
+    .boxInsertada{
+        display: inline-block;
+        margin-right: 5%;
+        width: 54%;
+    }
+    .boxEncriptada{
+        display: inline-block;
+        width: 40%;
+    }
+
+    #txtInsertado, #mensaje{
+        height: 55vh;
+    }
+
+    .socialIcons img{
+        width: 20px;
+    }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Montserrat:wght@300&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section id="background">
+
+        <header>
+            <h1><a href="">encriptador de texto v.0.0.1</a></h1>
+        </header>
+        
+        <main>
+            <section>
+                <form onsubmit = "return false" class="boxInsertada">
+                    <textarea rows="8" type="text" id="txtInsertado" required autofocus placeholder="Texto a encriptar/ desencriptar:"></textarea>
+                    <div class="cajaBtns">
+                        <button class="encriptar" onclick="btnEncriptar()">Encriptar</button>
+                        <button class="desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
+                    </div>
+                </form>
+        
+                <div class="boxEncriptada">
+                    <textarea rows="8" id="mensaje" readonly placeholder="El texto encriptado se mostrará aquí."></textarea>
+                    <button class="copiar" onclick="btnCopiar()">Copiar y limpiar campos</button>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+                <div class="copyright">
+                    <h4> © 2022 Jesus Palomino</h4>
+                </div>
+                <div>
+                    <button class="socialMedia">
+                        <p>Contact me</p>
+                        <ul class="socialIcons">
+                            <li><a href="https://www.linkedin.com/in/jesus-r-palomino-m"><img src="Imagenes/linkedin.svg" alt="linkedin"></a></li>
+                            <li><a href=""><img src="Imagenes/envelope.svg" alt="linkedin"></a></li>
+                            <li><a href=""><img src="Imagenes/github.svg" alt="github"></a></li>
+                        </ul>
+                    </button>
+                </div>
+        </footer>    
+    </section>
+
+    <script src="script.js"></script>
+    
+</body>
+
+</html>
