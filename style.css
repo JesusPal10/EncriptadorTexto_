@@ -49,8 +49,19 @@ header{
     width: 90%;
 }
 
+.logoEncriptador{
+    align-items: center;
+    justify-content: left;
+    align-content: center;   
+}
+
 header a{
     color: #fff;
+}
+
+
+header h5, header h4{
+    display: inline-block;
 }
 
 main{
@@ -67,7 +78,7 @@ main{
     color: #D86945;
     font-family: 'Roboto Mono';
     font-size: 1rem;
-
+    font-weight: 200;
     height: 22vh;
     padding-left: 4.35%;
     padding-top: 3vh;
@@ -84,11 +95,12 @@ main{
 
 #txtInsertado::placeholder{
     color: #df8652A6;
+    font-weight: 200;
 }
 
 #mensaje::placeholder{
     color: white; 
-    font-weight: 100;
+    font-weight: 200;
 }
 
 textarea:focus, textarea:hover{
@@ -108,7 +120,7 @@ textarea:focus, textarea:hover{
     border-radius: 8px;
     color: white;
     font-family: 'Montserrat';
-    font-weight: 100;
+    font-weight: 200;
     font-size: 12px;
     height: 5vh;
     margin-top: 3vh;
@@ -124,7 +136,6 @@ button:hover{
     animation: glowingorange 4s infinite;
     background:#D86945;
     transform: scale(1.05);
-
 }
 
 footer{
@@ -149,7 +160,7 @@ footer{
     transition: 4s all;
 }
 
-.socialMedia p{
+.socialMedia h6{
     padding-right: 16px;
     color: #fff;
 }
@@ -170,36 +181,46 @@ footer{
 
 .socialMedia li:hover{
     transform: scale(1.10);
-
 }
 
 .socialMedia:hover{
-    animation: glowingwhite 4s infinite;
+    animation: glowingwhite 1.5s infinite;
     background: none;
-    transform: scale(1.05);
+    transform: scale(1);
 }
 
 
 /*Media queries*/
 
-@media (min-width: 375px){
+@media (min-width: 375px),(max-height: 540px){
     html{
         font-size: 12px;
         color: white;
+            font-weight: 100;
     }
 
-    h1{
+    h6{
         font-family: 'Josefin Sans';
         font-size: 1rem;
     }
 
-    h4, li, p{
+    h5{
         font-family: 'Josefin Sans';
-        font-size: 0.75rem;
+        font-size: 1.2rem;
+    }
+
+    h4{
+        font-family: 'Roboto Mono';
+        font-size: 1.44rem;
+    }
+
+    p{
+        font-family: 'Roboto Mono';
+        font-size: 1rem;  
     }
 
     .encriptar, .desencriptar, .copiar{
-        font-size: 12px;
+        font-size: 1rem;
     }
 }
 
@@ -210,18 +231,13 @@ footer{
     }
 }
 
-@media (min-width: 1024px),(max-height: 540px){
+@media (min-width: 1024px){
     html{
         font-size: 16px;
     }
 
-    h1, h4, li,p{
-        font-family: 'Josefin Sans';
-        font-size: 1rem;
-    }
-
-    li{
-        font-size: 1rem;  
+    .encriptar, .desencriptar, .copiar{
+        font-size: 14px;
     }
     
     .boxInsertada{

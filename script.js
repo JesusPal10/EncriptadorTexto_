@@ -5,7 +5,7 @@ const textoInsertado = document.querySelector("#txtInsertado");
 //Filtro de caracteres//
 
 function filtroCaracteres(){
-    const caracteresAdmitidos= /[a-z + " "]/;
+    const caracteresAdmitidos= /[a-z ]/;
     textoInsertado.addEventListener("beforeinput", e => {
         if (!caracteresAdmitidos.test(e.data)) {
         e.preventDefault();
@@ -58,4 +58,11 @@ function btnCopiar() {
     textoInsertado.value = "";
     mensaje.value = "";
     textoInsertado.focus();
+}
+
+/* Android on screen keyboard */
+
+input.onfocus = function () {
+    window.scrollTo(0, 0);
+    document.body.scrollTop = 0;
 }
