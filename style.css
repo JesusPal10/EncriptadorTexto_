@@ -203,7 +203,7 @@ footer{
 
 /*Media queries*/
 
-@media (min-width: 375px),(max-height: 540px){
+@media (min-width: 280px){
     html{
         font-size: 12px;
         color: white;
@@ -235,14 +235,7 @@ footer{
     }
 }
 
-@media (min-width: 768px){
-    html{
-        font-size: 13px;
-        color: white;
-    }
-}
-
-@media (min-width: 1024px),(max-height: 540px){
+@media (min-width: 560px){
     html{
         font-size: 14px;
     }
@@ -272,7 +265,7 @@ footer{
     }
 }
 
-@media (max-height: 540px){
+@media (max-height: 560px){
     html{
         font-size: 10px;
     }
@@ -286,6 +279,6 @@ footer{
 
 @media (min-width: 1440px){
     html{
-        font-size: 16px;
+        font-size: 18px;
     }
 }
