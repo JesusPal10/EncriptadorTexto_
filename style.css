@@ -3,6 +3,10 @@ a{
     text-decoration: none;
 }
 
+img{
+    filter: invert(99%) sepia(5%) saturate(276%) hue-rotate(254deg) brightness(117%) contrast(100%);
+}
+
 @keyframes glowingorange {
     0%{
         box-shadow: 0 0 16px #D86945;
@@ -73,24 +77,26 @@ main{
 
 #txtInsertado, #mensaje{
     background: #1a1c2600;
-    border: none;
     border-radius: 8px;
     color: #D86945;
     font-family: 'Roboto Mono';
     font-size: 1rem;
     font-weight: 200;
-    height: 22vh;
-    padding-left: 4.35%;
-    padding-top: 3vh;
+    height: 16vh;
+    padding: 5vh 4.35%;
     resize: none;
-    width: 95%;
+    width: 90.65%;
+}
+
+#txtInsertado{
+    border: 1px #D8694540 solid;
 }
 
 #mensaje{
     animation: none; 
+    border: 1px #d86a4500 solid;
+    background: #df865266;
     color: white; 
-    background: #df865266; 
-    border-radius: 8px;
 }
 
 #txtInsertado::placeholder{
@@ -101,6 +107,12 @@ main{
 #mensaje::placeholder{
     color: white; 
     font-weight: 200;
+    background-image: url(Imagenes/file-earmark-lock2-fill.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 80px;
+    padding-left: 88px; 
+    line-height: 80px; 
 }
 
 textarea:focus, textarea:hover{
@@ -119,17 +131,18 @@ textarea:focus, textarea:hover{
     border: none;
     border-radius: 8px;
     color: white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
     font-family: 'Montserrat';
     font-weight: 200;
     font-size: 12px;
+    gap: 8px;
     height: 5vh;
     margin-top: 3vh;
+    margin-bottom: 3vh; 
     transition: 1s all;
     width: 100%;
-}
-
-.encriptar, .desencriptar{ 
-    margin-bottom: 3vh;    
 }
 
 button:hover{
@@ -175,7 +188,6 @@ footer{
 }
 
 .socialIcons li{
-    filter: invert(99%) sepia(5%) saturate(276%) hue-rotate(254deg) brightness(117%) contrast(100%);
     transition: 1s all;
 }
 
@@ -189,14 +201,13 @@ footer{
     transform: scale(1);
 }
 
-
 /*Media queries*/
 
-@media (min-width: 375px),(max-height: 540px){
+@media (min-width: 240px){
     html{
         font-size: 12px;
         color: white;
-            font-weight: 100;
+        font-weight: 100;
     }
 
     h6{
@@ -226,14 +237,14 @@ footer{
 
 @media (min-width: 768px){
     html{
-        font-size: 14px;
+        font-size: 13px;
         color: white;
     }
 }
 
-@media (min-width: 1024px){
+@media (min-width: 1024px),(max-height: 540px){
     html{
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .encriptar, .desencriptar, .copiar{
@@ -243,18 +254,38 @@ footer{
     .boxInsertada{
         display: inline-block;
         margin-right: 5%;
+        vertical-align: top;
         width: 54%;
     }
     .boxEncriptada{
         display: inline-block;
+        vertical-align: top;
         width: 40%;
     }
 
     #txtInsertado, #mensaje{
-        height: 55vh;
+        height: 52vh;
     }
 
     .socialIcons img{
         width: 20px;
+    }
+}
+
+@media (max-height: 540px){
+    html{
+        font-size: 10px;
+    }
+    .socialIcons img{
+        width: 15px;
+    }
+    .encriptar, .desencriptar, .copiar{
+        font-size: 10px;
+    }
+}
+
+@media (min-width: 1440px){
+    html{
+        font-size: 16px;
     }
 }

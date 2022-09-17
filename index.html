@@ -13,30 +13,28 @@
 </head>
 
 <body>
+
     <section id="background">
 
         <header>
-            <div class="logoEncriptador"><a href="">
-            <h5>encriptador de texto</h5>
-            <h4>&nbsp;v.0.0.1_</h4></a>
-            </div>
+            <div class="logoEncriptador"><a href=""><h5>encriptador de texto</h5><h4>&nbsp;v.0.0.1_</h4></a></div>
         </header>
         
         <main>
-            <section>
-                <form onsubmit = "return false" class="boxInsertada">
-                    <textarea rows="8" type="text" id="txtInsertado" required autofocus placeholder="Texto a encriptar/ desencriptar:"></textarea>
-                    <div class="cajaBtns">
-                        <button class="encriptar" onclick="btnEncriptar()">Encriptar</button>
-                        <button class="desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
-                    </div>
-                </form>
-        
-                <div class="boxEncriptada">
-                    <textarea rows="8" id="mensaje" readonly placeholder="El texto encriptado se mostrará aquí."></textarea>
-                    <button class="copiar" onclick="btnCopiar()">Copiar y limpiar campos</button>
+            <form onsubmit="return false" class="boxInsertada">
+                <textarea autofocus rows="8" id="txtInsertado" required placeholder="Texto a encriptar/ desencriptar:"></textarea>
+                <div class="cajaBtns">
+                    <button class="encriptar" onclick="btnEncriptar()"><img src="Imagenes/lock-fill.svg">Encriptar</button>
+                    <button class="desencriptar" onclick="btnDesencriptar()"><img src="Imagenes/unlock-fill.svg">Desencriptar</button>
                 </div>
-            </section>
+            </form>
+        
+            <form class="boxEncriptada">
+                <textarea rows="8" id="mensaje" readonly placeholder="El texto aparecerá aquí"></textarea>
+                <div class="cajaBtns">
+                    <button class="copiar" onclick="btnCopiar()"><img src="Imagenes/shield-lock-fill.svg">Copiar y limpiar campos</button>
+                </div>
+            </form>
         </main>
         
         <footer>
@@ -45,7 +43,7 @@
                 </div>
                 <div>
                     <button class="socialMedia">
-                        <h6>Contact me</h6>
+                        <h6>contact me</h6>
                         <ul class="socialIcons">
                             <li><a href="https://www.linkedin.com/in/jesus-r-palomino-m"><img src="Imagenes/linkedin.svg" alt="linkedin icon"></a></li>
                             <li><a href="https://github.com/JesusPal10"><img src="Imagenes/github.svg" alt="github icon"></a></li>
